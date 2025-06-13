@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>wisteriatp.work</title>
+
+    <style>
+        @media (max-width: 767px) {
+            .bg-deco {
+                display: none !important;
+            }
+        }
+
+        .card-link-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card-link-wrapper .card {
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card-link-wrapper:hover .card {
+            box-shadow: 0 0 16px 2px #74b02055;
+            transform: translateY(-2px) scale(1.01);
+            border-color: #74b020;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vh-100 position-relative">
+        <!-- <div class="bg-deco" style="
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #74b020;
+                clip-path: polygon(100% 25%, 100% 100%, 50% 100%);
+                position: absolute;
+        "></div> -->
+        <h1 class="custom-h1" style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 100%;
+                border-bottom: 4px solid #74b020;
+                padding-bottom: 0.2em;
+            ">Welcome to wisteriatp.work</h1>
+    </div>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="#">wisteriatp.work</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#socials">Social Links</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="container">
+        <section id="works">
+            <h2 class="mt-5">Works</h2>
+            <div class="col-md-6 mb-3">
+                <a href="#" class="card-link-wrapper">
+                    <div class="card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4">
+                                <img src="https://via.placeholder.com/100" class="img-fluid rounded-start" alt="サンプル画像">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">開発プロジェクトA</h5>
+                                    <p class="card-text">説明文（Develop, Photo）</p>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2 class="mt-5">Activities</h2>
+            <div class="col-md-6 mb-3">
+                <a href="#" class="card-link-wrapper">
+                    <div class="card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4">
+                                <img src="https://via.placeholder.com/100" class="img-fluid rounded-start" alt="サンプル画像">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">開発プロジェクトA</h5>
+                                    <p class="card-text">説明文（Develop, Photo）</p>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="socials">
+            <h2 class="mt-5">Social Links</h2>
+            <!-- タブ風ナビゲーション -->
+            <ul class="nav nav-tabs mb-4 justify-content-center nav-justified" id="socials-tab">
+                <li class="nav-item">
+                    <a class="nav-link active tag-tab" data-tag="all" href="#">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tag-tab" data-tag="Develop" href="#">Develop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tag-tab" data-tag="Photo" href="#">Photo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tag-tab" data-tag="Music" href="#">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tag-tab" data-tag="Other" href="#">Other</a>
+                </li>
+            </ul>
+            <div class="row" id="socials-list">
+                <div class="col-md-6 mb-3 portfolio-item" data-tags="Develop Photo">
+                    <a href="#" class="card-link-wrapper">
+                        <div class="card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-4">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
+                                        alt="サンプル画像">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">開発プロジェクトA</h5>
+                                        <p class="card-text">説明文（Develop, Photo）</p>
+                                        <div class="card-tags mb-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3 portfolio-item" data-tags="Photo Music">
+                    <a href="#" class="card-link-wrapper">
+                        <div class="card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-4">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
+                                        alt="サンプル画像">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">写真作品B</h5>
+                                        <p class="card-text">説明文（Photo, Music）</p>
+                                        <div class="card-tags mb-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3 portfolio-item" data-tags="Music">
+                    <a href="#" class="card-link-wrapper">
+                        <div class="card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-4">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
+                                        alt="サンプル画像">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">音楽作品C</h5>
+                                        <p class="card-text">説明文（Music）</p>
+                                        <div class="card-tags mb-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3 portfolio-item" data-tags="Social Other">
+                    <a href="#" class="card-link-wrapper">
+                        <div class="card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-4">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
+                                        alt="サンプル画像">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">SNS活動D</h5>
+                                        <p class="card-text">説明文（Social, Other）</p>
+                                        <div class="card-tags mb-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3 portfolio-item" data-tags="Other Develop">
+                    <a href="#" class="card-link-wrapper">
+                        <div class="card">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-4">
+                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
+                                        alt="サンプル画像">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">その他E</h5>
+                                        <p class="card-text">説明文（Other, Develop）</p>
+                                        <div class="card-tags mb-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+        // タブによるフィルタリング（空白区切り複数タグ対応）
+        document.querySelectorAll('.tag-tab').forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                const tag = this.getAttribute('data-tag');
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    const tags = item.getAttribute('data-tags').split(/\s+/).map(t => t.trim());
+                    if (tag === 'all' || tags.includes(tag)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                // タブのactive状態切替
+                document.querySelectorAll('.tag-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        // 初期状態でAllをactiveに
+        document.querySelector('.tag-tab[data-tag="all"]').classList.add('active');
+
+        // カード内にタグバッジを表示
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            const tags = item.getAttribute('data-tags');
+            if (!tags) return;
+            const tagList = tags.split(/\s+/).map(t => t.trim()).filter(Boolean);
+            const tagContainer = item.querySelector('.card-tags');
+            tagList.forEach(tag => {
+                const badge = document.createElement('span');
+                badge.className = 'badge bg-secondary me-1';
+                badge.textContent = tag;
+                tagContainer.appendChild(badge);
+            });
+        });
+    </script>
+</body>
+
+</html>
