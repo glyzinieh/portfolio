@@ -22,14 +22,40 @@
             display: block;
         }
 
-        .card-link-wrapper .card {
+        .card-link-wrapper {
             transition: box-shadow 0.2s, transform 0.2s;
         }
 
-        .card-link-wrapper:hover .card {
+        .card-link-wrapper:hover {
             box-shadow: 0 0 16px 2px #74b02055;
             transform: translateY(-2px) scale(1.01);
             border-color: #74b020;
+        }
+
+        /* h1下線アニメーション */
+        .custom-h1 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .custom-h1::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: #74b020;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: underline-appear 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+
+        @keyframes underline-appear {
+            to {
+                transform: scaleX(1);
+            }
         }
     </style>
 </head>
@@ -51,7 +77,7 @@
                 transform: translate(-50%, -50%);
                 text-align: center;
                 width: 100%;
-                border-bottom: 4px solid #74b020;
+                /* border-bottom: 4px solid #74b020; 削除 */
                 padding-bottom: 0.2em;
             ">Welcome to wisteriatp.work</h1>
     </div>
@@ -83,7 +109,7 @@
     </nav> -->
 
     <div class="container">
-        <section id="works">
+        <!-- <section id="works">
             <h2 class="mt-5">Works</h2>
             <div class="col-md-6 mb-3">
                 <a href="#" class="card-link-wrapper">
@@ -103,9 +129,9 @@
                     </div>
                 </a>
             </div>
-        </section>
+        </section> -->
 
-        <section id="activities">
+        <!-- <section id="activities">
             <h2 class="mt-5">Activities</h2>
             <div class="col-md-6 mb-3">
                 <a href="#" class="card-link-wrapper">
@@ -125,9 +151,9 @@
                     </div>
                 </a>
             </div>
-        </section>
+        </section> -->
 
-        <section id="socials">
+        <section id="socials" class="min-vh-100">
             <h2 class="mt-5">Social Links</h2>
             <!-- タブ風ナビゲーション -->
             <ul class="nav nav-tabs mb-4 justify-content-center nav-justified" id="socials-tab">
@@ -148,96 +174,354 @@
                 </li>
             </ul>
             <div class="row" id="socials-list">
-                <div class="col-md-6 mb-3 portfolio-item" data-tags="Develop Photo">
-                    <a href="#" class="card-link-wrapper">
-                        <div class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
-                                        alt="サンプル画像">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">開発プロジェクトA</h5>
-                                        <p class="card-text">説明文（Develop, Photo）</p>
-                                        <div class="card-tags mb-2"></div>
-                                    </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Develop Photo Other">
+                    <a href="https://x.com/wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 50 50"
+                                    class="img rounded-start">
+                                    <path fill-rule="nonzero"
+                                        d="M27.258 22.703h.001L38.055 10h-2.558l-9.375 11.03L18.636 10H10l11.322 16.679L10 40h2.559l9.899-11.648L30.365 40H39L27.258 22.703Zm-3.503 4.123-1.147-1.661-9.128-13.216h3.93l7.366 10.666 1.147 1.66 9.575 13.864h-3.93l-7.813-11.313Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">うぃすたりあ</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisteriatp</h6>
+                                    <p class="card-text">X (formerly Twitter)</p>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 mb-3 portfolio-item" data-tags="Photo Music">
-                    <a href="#" class="card-link-wrapper">
-                        <div class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
-                                        alt="サンプル画像">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">写真作品B</h5>
-                                        <p class="card-text">説明文（Photo, Music）</p>
-                                        <div class="card-tags mb-2"></div>
-                                    </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Music">
+                    <a href="https://x.com/soleilatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 50 50"
+                                    class="img rounded-start">
+                                    <path fill-rule="nonzero"
+                                        d="M27.258 22.703h.001L38.055 10h-2.558l-9.375 11.03L18.636 10H10l11.322 16.679L10 40h2.559l9.899-11.648L30.365 40H39L27.258 22.703Zm-3.503 4.123-1.147-1.661-9.128-13.216h3.93l7.366 10.666 1.147 1.66 9.575 13.864h-3.93l-7.813-11.313Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">それいゆ</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@soleilatp</h6>
+                                    <p class="card-text">X (formerly Twitter)</p>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 mb-3 portfolio-item" data-tags="Music">
-                    <a href="#" class="card-link-wrapper">
-                        <div class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
-                                        alt="サンプル画像">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">音楽作品C</h5>
-                                        <p class="card-text">説明文（Music）</p>
-                                        <div class="card-tags mb-2"></div>
-                                    </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://x.com/wisiteria" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 50 50"
+                                    class="img rounded-start">
+                                    <path fill-rule="nonzero"
+                                        d="M27.258 22.703h.001L38.055 10h-2.558l-9.375 11.03L18.636 10H10l11.322 16.679L10 40h2.559l9.899-11.648L30.365 40H39L27.258 22.703Zm-3.503 4.123-1.147-1.661-9.128-13.216h3.93l7.366 10.666 1.147 1.66 9.575 13.864h-3.93l-7.813-11.313Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">大学</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisiteria</h6>
+                                    <p class="card-text">X (formerly Twitter)</p>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 mb-3 portfolio-item" data-tags="Social Other">
-                    <a href="#" class="card-link-wrapper">
-                        <div class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
-                                        alt="サンプル画像">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SNS活動D</h5>
-                                        <p class="card-text">説明文（Social, Other）</p>
-                                        <div class="card-tags mb-2"></div>
-                                    </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://x.com/wisubteria" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 50 50"
+                                    class="img rounded-start">
+                                    <path fill-rule="nonzero"
+                                        d="M27.258 22.703h.001L38.055 10h-2.558l-9.375 11.03L18.636 10H10l11.322 16.679L10 40h2.559l9.899-11.648L30.365 40H39L27.258 22.703Zm-3.503 4.123-1.147-1.661-9.128-13.216h3.93l7.366 10.666 1.147 1.66 9.575 13.864h-3.93l-7.813-11.313Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">ゆる鍵</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisubteria</h6>
+                                    <p class="card-text">X (formerly Twitter)</p>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 mb-3 portfolio-item" data-tags="Other Develop">
-                    <a href="#" class="card-link-wrapper">
-                        <div class="card">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/100" class="img-fluid rounded-start"
-                                        alt="サンプル画像">
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://x.com/wistereal" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 50 50"
+                                    class="img rounded-start">
+                                    <path fill-rule="nonzero"
+                                        d="M27.258 22.703h.001L38.055 10h-2.558l-9.375 11.03L18.636 10H10l11.322 16.679L10 40h2.559l9.899-11.648L30.365 40H39L27.258 22.703Zm-3.503 4.123-1.147-1.661-9.128-13.216h3.93l7.366 10.666 1.147 1.66 9.575 13.864h-3.93l-7.813-11.313Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">リアル</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wistereal</h6>
+                                    <p class="card-text">X (formerly Twitter)</p>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">その他E</h5>
-                                        <p class="card-text">説明文（Other, Develop）</p>
-                                        <div class="card-tags mb-2"></div>
-                                    </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Photo">
+                    <a href="https://instagram.com/wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" role="img"
+                                    class="img rounded-start">
+                                    <path
+                                        d="M137.662,43.55a30.975,30.975,0,0,1,30.944,30.944v63.062A30.975,30.975,0,0,1,137.662,168.5H74.6a30.974,30.974,0,0,1-30.943-30.944V74.494A30.974,30.974,0,0,1,74.6,43.55h63.063m0-14.7H74.6A45.643,45.643,0,0,0,28.956,74.494h0v63.062A45.643,45.643,0,0,0,74.6,183.2h63.063a45.643,45.643,0,0,0,45.644-45.644h0V74.494A45.643,45.643,0,0,0,137.662,28.85Z">
+                                    </path>
+                                    <path
+                                        d="M105.606,79.25a26.25,26.25,0,1,1-26.25,26.25h0a26.251,26.251,0,0,1,26.25-26.25m0-13.65a39.9,39.9,0,1,0,39.9,39.9A39.9,39.9,0,0,0,105.606,65.6Z">
+                                    </path>
+                                    <path d="M147.606,55.1a9.45,9.45,0,1,0,9.45,9.45A9.45,9.45,0,0,0,147.606,55.1Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">@wisteriatp</h5>
+                                    <p class="card-text">Instagram</p>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://instagram.com/glyzinie.h" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" role="img"
+                                    class="img rounded-start">
+                                    <path
+                                        d="M137.662,43.55a30.975,30.975,0,0,1,30.944,30.944v63.062A30.975,30.975,0,0,1,137.662,168.5H74.6a30.974,30.974,0,0,1-30.943-30.944V74.494A30.974,30.974,0,0,1,74.6,43.55h63.063m0-14.7H74.6A45.643,45.643,0,0,0,28.956,74.494h0v63.062A45.643,45.643,0,0,0,74.6,183.2h63.063a45.643,45.643,0,0,0,45.644-45.644h0V74.494A45.643,45.643,0,0,0,137.662,28.85Z">
+                                    </path>
+                                    <path
+                                        d="M105.606,79.25a26.25,26.25,0,1,1-26.25,26.25h0a26.251,26.251,0,0,1,26.25-26.25m0-13.65a39.9,39.9,0,1,0,39.9,39.9A39.9,39.9,0,0,0,105.606,65.6Z">
+                                    </path>
+                                    <path d="M147.606,55.1a9.45,9.45,0,1,0,9.45,9.45A9.45,9.45,0,0,0,147.606,55.1Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">リアル</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@glyzinie.h</h6>
+                                    <p class="card-text">Instagram</p>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://sizu.me/wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/sizu_me.png" class="img rounded-start mw-100 h-100"
+                                    alt="sizu.meのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">しずかなインターネット</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisteriatp</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Develop">
+                    <a href="https://github.com/glyzinieh" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/github.png" class="img rounded-start mw-100 h-100" alt="GitHubのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">GitHub</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@glyzinieh</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Develop">
+                    <a href="https://qiita.com/wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/qiita.png" class="img rounded-start mw-100 h-100" alt="Qiitaのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Qiita</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisteriatp</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Develop">
+                    <a href="https://teratail.com/users/glyzinieh" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/teratail.png" class="img rounded-start mw-100 h-100"
+                                    alt="teratailのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">teratail</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@glyzinieh</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Develop">
+                    <a href="https://scratch.mit.edu/users/glyzinie/" class="card card-link-wrapper h-100"
+                        target="_blank" rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/scratch.png" class="img rounded-start mw-100 h-100"
+                                    alt="Scratchのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Scratch</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@glyzinie</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://www.facebook.com/haruhiko.f/" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" role="img"
+                                    class="img rounded-start">
+                                    <path
+                                        d="M175.63,105.816a70.577,70.577,0,1,0-81.607,69.727V126.218H76.109v-20.4H94.023V90.274c0-17.694,10.5-27.465,26.657-27.465a108.981,108.981,0,0,1,15.857,1.375V81.553h-8.9c-8.774,0-11.545,5.446-11.545,11.03v13.233h19.573l-3.148,20.4H116.083v49.325A70.6,70.6,0,0,0,175.63,105.816Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Facebook</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">藤 陽彦</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://youtube.com/@wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" role="img"
+                                    class="img rounded-start">
+                                    <path
+                                        d="M172.692,69.6A17.674,17.674,0,0,0,160.26,57.083c-10.973-2.961-54.968-2.961-54.968-2.961s-44,0-54.978,2.961A17.671,17.671,0,0,0,37.872,69.6c-2.94,11.046-2.94,34.083-2.94,34.083s0,23.1,2.94,34.094A17.672,17.672,0,0,0,50.3,150.292c10.972,2.929,54.978,2.929,54.978,2.929s43.995,0,54.967-2.961a17.673,17.673,0,0,0,12.443-12.516c2.94-11.046,2.94-34.093,2.94-34.093S175.632,80.645,172.692,69.6ZM92.01,125.386V83.543l36.75,20.927Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">YouTube</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisteriatp</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://peing.net/ja/wisteriatp" class="card card-link-wrapper h-100" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/peing.png" class="img rounded-start mw-100 h-100" alt="Peingのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Peing -質問箱-</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@wisteriatp</h6>
+                                    <div class="card-tags mb-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 mb-3 portfolio-item" data-tags="Other">
+                    <a href="https://steamcommunity.com/profiles/76561198879036259/"
+                        class="card card-link-wrapper h-100" target="_blank" rel="noopener noreferrer">
+                        <div class="row g-0 align-items-center h-100">
+                            <div class="col-4">
+                                <img src="static/img/steam.png" class="img rounded-start mw-100 h-100" alt="Steamのロゴ">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Steam</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@glyzinie.h</h6>
+                                    <div class="card-tags mb-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +531,7 @@
         </section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script>
@@ -280,7 +564,7 @@
             const tagContainer = item.querySelector('.card-tags');
             tagList.forEach(tag => {
                 const badge = document.createElement('span');
-                badge.className = 'badge bg-secondary me-1';
+                badge.className = 'badge bg-primary me-1';
                 badge.textContent = tag;
                 tagContainer.appendChild(badge);
             });
